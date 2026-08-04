@@ -9,7 +9,8 @@ body{background:var(--bg);color:var(--ink);font-family:'Space Grotesk',sans-seri
 a{color:inherit;text-decoration:none}
 .mono{font-family:'JetBrains Mono',monospace}
 
-/* fixed packet spine */
+@media(max-width:1000px){.mobilegap{display:block;height:25px}}
+
 #spine{position:fixed;left:38px;top:0;bottom:0;width:2px;background:var(--line);z-index:5}
 #spine .fill{position:absolute;top:0;left:0;width:100%;height:0;background:var(--lime);box-shadow:0 0 12px var(--lime)}
 #spine .packet{position:absolute;left:-4px;width:10px;height:10px;border-radius:50%;background:var(--lime);
@@ -167,7 +168,6 @@ h2.big{font-size:clamp(34px,6vw,64px);font-weight:700;letter-spacing:-.03em;line
   padding:10px 24px;
   font-size:13px;
 }
-
 .card .project-btn:hover{
   border-color:var(--lime);
   color:var(--lime);
