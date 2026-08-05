@@ -26,7 +26,7 @@ if(mb&&nl){
   });
 }
 // contact form: Formspree if configured, otherwise open the visitor's mail app
-emailjs.init("8eHqZUf4UZqJNAc2F");
+emailjs.init("VibRp2tZH1PQH9vb_");
 
 const cf = document.getElementById('cform');
 
@@ -45,8 +45,8 @@ if (cf) {
     };
 
     emailjs.send(
-      "service_f4w2pg9",
-      "template_haekc69",
+      "service_uyv0h79",
+      "template_0yvdcsr",
       params
     )
     .then(() => {
