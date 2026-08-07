@@ -393,7 +393,7 @@ h2.big {
   to { transform: translateX(-50%); }
 }
 
-/* About Section & Counter Grid */
+/* About Section & Counter Grid / Profile Card with 1:1 Image Layout */
 .about p.lede {
   font-size: clamp(20px, 3vw, 30px);
   line-height: 1.45;
@@ -404,6 +404,84 @@ h2.big {
 .about p.lede em {
   font-style: normal;
   color: var(--lime);
+}
+
+/* About Section Grid Layout */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 40px;
+  align-items: center;
+  margin-top: 24px;
+  margin-bottom: 0;
+}
+
+.profile-card {
+  background: #111114;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 24px;
+  position: relative;
+  transition: .2s;
+}
+
+.profile-card:hover {
+  border-color: var(--lime);
+}
+
+/* Profile Image 1:1 Aspect Ratio Styles */
+.profile-img-wrap {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  border: 1px solid var(--line);
+  background: #18181c;
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.profile-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11.5px;
+  color: var(--lime);
+  margin-bottom: 12px;
+}
+
+.profile-status .dot {
+  width: 8px;
+  height: 8px;
+  background: var(--lime);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--lime);
+}
+
+.profile-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.profile-role {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12.5px;
+  color: var(--dim);
+  margin-bottom: 10px;
+}
+
+.profile-desc {
+  font-size: 14px;
+  color: var(--dim);
+  line-height: 1.5;
 }
 
 .stats {
@@ -712,6 +790,13 @@ footer {
 @media(max-width: 900px) {
   .mail {
     font-size: 30px;
+  }
+}
+
+@media(max-width: 850px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
 }
 
