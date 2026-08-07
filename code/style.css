@@ -28,7 +28,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Bulletproof Anchor Reset — ফিক্সড (যাতে ব্রাউজারের ডিফল্ট নীল রঙ না আসে) */
+/* Bulletproof Anchor Reset */
 a, a:link, a:visited, a:active {
   color: inherit !important;
   text-decoration: none !important;
@@ -240,11 +240,11 @@ nav.top .links {
 
 .hero .tag .name {
   font-size: 1.4em;
-  font-family: aria, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 .hero .tag .bar {
-  font-family: aria, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 /* Typography & Reveals */
@@ -339,6 +339,7 @@ nav.top .links {
 @keyframes bob {
   50% { transform: translate(-50%, 8px); }
 }
+
 
 /* ==========================================================================
    4. SECTIONS & COMPONENTS (Marquee, About, Skills, Experience)
