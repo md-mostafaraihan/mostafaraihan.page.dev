@@ -12,15 +12,46 @@
   <meta name="keywords"
     content="MD. Mostafa Raihan, Mostafa Raihan, Network Specialist, Network Support Specialist, Cisco Networking, MikroTik Specialist, NOC Support, GPON Fiber, FTTH, VLAN Configuration, OSPF, PPPoE, Router Configuration, Feni Bangladesh">
   <meta name="author" content="MD. Mostafa Raihan">
-  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
   <!-- Icons & Canonical -->
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="apple-touch-icon" href="favicon.svg">
   <link rel="canonical" href="https://mostafaraihan.pages.dev/">
 
-  <!-- Stylesheet -->
+  <!-- =============================================
+       PERFORMANCE: DNS Prefetch & Preconnect
+       ============================================= -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//fonts.gstatic.com">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- =============================================
+       PERFORMANCE: Preload Critical Resources
+       ============================================= -->
+  <!-- Preload LCP hero image for fast render -->
+  <link rel="preload" as="image" href="profile.jpg" fetchpriority="high">
+  <!-- Preload critical CSS -->
+  <link rel="preload" as="style" href="code/style.css">
+  <!-- Preload critical font subset -->
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="https://fonts.gstatic.com/s/spacegrotesk/v16/V8mQoQDjQSkFtoMM3T6r8E7mF71Q-gozuPTPgVc.woff2">
+
+  <!-- Stylesheet (critical — load inline render path) -->
   <link rel="stylesheet" href="code/style.css">
+
+  <!-- Fonts: display=swap avoids invisible text during load -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet">
+  </noscript>
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
@@ -47,14 +78,7 @@
   <meta name="twitter:image" content="https://mostafaraihan.pages.dev/profile.jpg">
   <meta name="twitter:image:alt" content="MD. Mostafa Raihan Profile">
 
-  <!-- Fonts Optimization -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
-    rel="stylesheet">
-
-  <!-- EmailJS API -->
+  <!-- EmailJS — defer, non-blocking -->
   <script defer src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
   <!-- Google Rich Results / Structured Data -->
