@@ -1,10 +1,10 @@
-// ১. duplicate marquee for seamless loop (Added safety check)
+// 1. Duplicate marquee for seamless infinite loop
 const mq = document.getElementById('mq');
 if (mq) {
   mq.innerHTML += mq.innerHTML;
 }
 
-// scroll spine + percentage (marker fades out over the footer)
+// 2. Scroll spine + percentage marker indicator
 const fill = document.querySelector('#spine .fill'),
       pk = document.querySelector('#spine .packet'),
       pct = document.getElementById('pct'),
@@ -14,17 +14,19 @@ if (marker) marker.style.transition = 'opacity .3s';
 
 addEventListener('scroll', () => {
   const h = document.documentElement;
-  const p = h.scrollTop / (h.scrollHeight - h.clientHeight);
+  const maxScroll = h.scrollHeight - h.clientHeight;
+  const p = maxScroll > 0 ? h.scrollTop / maxScroll : 0;
   if (fill) fill.style.height = (p * 100) + '%';
-  if (pk) pk.style.top = `calc(${p * 100}% - 5px)`; // Keep spaces around '-'
+  if (pk) pk.style.top = `calc(${p * 100}% - 5px)`;
   if (pct) pct.textContent = Math.round(p * 100) + '%';
   if (marker) marker.style.opacity = p > 0.96 ? 0 : 1;
 }, { passive: true });
 
-// mobile nav
+// 3. Mobile Navigation Controls (Click outside & Escape key handlers)
 const mb = document.querySelector('.menu-btn'), nl = document.getElementById('navlinks');
 if (mb && nl) {
-  mb.addEventListener('click', () => {
+  mb.addEventListener('click', e => {
+    e.stopPropagation();
     const open = nl.classList.toggle('open');
     mb.setAttribute('aria-expanded', open);
   });
@@ -34,11 +36,27 @@ if (mb && nl) {
       mb.setAttribute('aria-expanded', 'false');
     }
   });
+  document.addEventListener('click', e => {
+    if (nl.classList.contains('open') && !nl.contains(e.target) && !mb.contains(e.target)) {
+      nl.classList.remove('open');
+      mb.setAttribute('aria-expanded', 'false');
+    }
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && nl.classList.contains('open')) {
+      nl.classList.remove('open');
+      mb.setAttribute('aria-expanded', 'false');
+    }
+  });
 }
 
-// contact form: EmailJS Integration
+// 4. Contact Form Integration (Safe null-checks & EmailJS fallback)
 if (typeof emailjs !== 'undefined') {
-  emailjs.init("VibRp2tZH1PQH9vb_");
+  try {
+    emailjs.init("VibRp2tZH1PQH9vb_");
+  } catch (err) {
+    console.warn("EmailJS init warning:", err);
+  }
 }
 
 const cf = document.getElementById('cform');
@@ -46,31 +64,51 @@ if (cf) {
   cf.addEventListener('submit', e => {
     e.preventDefault();
 
-    const n = document.getElementById('cf-name').value;
-    const em = document.getElementById('cf-email').value;
-    const m = document.getElementById('cf-msg').value;
+    const nameEl = document.getElementById('cf-name');
+    const emailEl = document.getElementById('cf-email');
+    const msgEl = document.getElementById('cf-msg');
+    const note = document.getElementById('cform-note');
+
+    if (!nameEl || !emailEl || !msgEl) return;
 
     const params = {
-      user_name: n,
-      user_email: em,
-      message: m
+      user_name: nameEl.value,
+      user_email: emailEl.value,
+      message: msgEl.value
     };
 
-    const note = document.getElementById('cform-note');
+    if (typeof emailjs === 'undefined') {
+      if (note) {
+        note.style.color = '#ff6b6b';
+        note.textContent = "Email service temporarily unavailable. Please email directly via link above.";
+      }
+      return;
+    }
+
+    if (note) {
+      note.style.color = 'var(--lime)';
+      note.textContent = "Transmitting message...";
+    }
 
     emailjs.send("service_uyv0h79", "template_0yvdcsr", params)
     .then(() => {
-      if (note) note.textContent = "Message sent successfully ✓";
+      if (note) {
+        note.style.color = 'var(--lime)';
+        note.textContent = "Message sent successfully ✓";
+      }
       cf.reset();
     })
     .catch(error => {
-      if (note) note.textContent = "Message failed. Try again.";
-      console.error(error);
+      if (note) {
+        note.style.color = '#ff6b6b';
+        note.textContent = "Message failed to send. Please try emailing directly.";
+      }
+      console.error("EmailJS submission error:", error);
     });
   });
 }
 
-// reveal
+// 5. Scroll Reveal Animations
 const io = new IntersectionObserver(es => es.forEach(e => {
   if (e.isIntersecting) {
     e.target.classList.add('in');
@@ -79,7 +117,7 @@ const io = new IntersectionObserver(es => es.forEach(e => {
 }), { threshold: .12 });
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-// counters
+// 6. Number Counter Animations
 const io3 = new IntersectionObserver(es => es.forEach(e => {
   if (!e.isIntersecting) return;
   io3.unobserve(e.target);
@@ -92,8 +130,7 @@ const io3 = new IntersectionObserver(es => es.forEach(e => {
 }), { threshold: .6 });
 document.querySelectorAll('[data-count]').forEach(el => io3.observe(el));
 
-
-// 3D spine-leaf fabric hero
+// 7. 3D Spine-Leaf Fabric Hero Canvas
 (function(){
   const canvas = document.getElementById('net3d');
   if (!canvas || !window.THREE) return;
@@ -196,9 +233,18 @@ document.querySelectorAll('[data-count]').forEach(el => io3.observe(el));
     ty = (e.clientY / innerHeight - 0.5);
   }, { passive: true });
 
-  // Optimized Resize: Executed only on event trigger, not on every frame
+  // Passive Visibility Check (Eliminates forced reflow in render loop)
+  let isCanvasVisible = true;
+  const canvasObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      isCanvasVisible = entry.isIntersecting;
+    });
+  }, { threshold: 0 });
+  canvasObserver.observe(canvas);
+
   function resize() {
     const w = canvas.clientWidth, h = canvas.clientHeight;
+    if (!w || !h) return;
     renderer.setSize(w, h, false);
     camera.aspect = w / h;
     camera.updateProjectionMatrix();
@@ -206,12 +252,12 @@ document.querySelectorAll('[data-count]').forEach(el => io3.observe(el));
     else { fab.position.x = 1.9; camera.position.z = 11; }
   }
   addEventListener('resize', resize, { passive: true });
-  resize(); // Initial call
+  resize();
 
   const clock = new THREE.Clock(); let t0 = 0;
   (function frame() {
     requestAnimationFrame(frame);
-    if (canvas.getBoundingClientRect().bottom < 0) return; // Skip rendering if off-screen
+    if (!isCanvasVisible) return;
     
     const dt = Math.min(clock.getDelta(), 0.05); t0 += dt;
     fab.rotation.y = -0.42 + Math.sin(t0 * 0.18) * 0.06;

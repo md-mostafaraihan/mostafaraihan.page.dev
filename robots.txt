@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://networkingwithraihan.pages.dev/sitemap.xml
+Sitemap: https://mostafaraihan.pages.dev/sitemap.xml

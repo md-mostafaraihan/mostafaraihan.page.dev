@@ -378,7 +378,7 @@ h2.big {
   width: max-content;
   gap: 48px;
   white-space: nowrap;
-  animation: scrollx 12s linear infinite;
+  animation: scrollx 24s linear infinite;
   font-family: 'JetBrains Mono', monospace;
   font-size: 14px;
   color: var(--dim);
@@ -885,5 +885,30 @@ footer {
   }
   .cform-row {
     grid-template-columns: 1fr;
+  }
+}
+
+@media(max-width: 480px) {
+  #spine {
+    left: 12px;
+  }
+  .wrap, footer {
+    padding-left: 32px;
+    padding-right: 16px;
+  }
+  nav.top {
+    padding-left: 28px;
+    padding-right: 18px;
+  }
+  .hero h1 {
+    font-size: clamp(38px, 11vw, 56px);
+  }
+  .card {
+    padding: 22px 18px;
+    top: 75px;
+  }
+  .marker {
+    right: 14px;
+    bottom: 16px;
   }
 }
