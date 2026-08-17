@@ -53,7 +53,7 @@ if (mb && nl) {
 // 4. Contact Form Integration (Safe null-checks & EmailJS fallback)
 if (typeof emailjs !== 'undefined') {
   try {
-    emailjs.init("VibRp2tZH1PQH9vb_");
+    emailjs.init("8eHqZUf4UZqJNAc2F");
   } catch (err) {
     console.warn("EmailJS init warning:", err);
   }
@@ -90,7 +90,7 @@ if (cf) {
       note.textContent = "Transmitting message...";
     }
 
-    emailjs.send("service_uyv0h79", "template_0yvdcsr", params)
+    emailjs.send("service_f4w2pg9", "template_haekc69", params)
     .then(() => {
       if (note) {
         note.style.color = 'var(--lime)';
