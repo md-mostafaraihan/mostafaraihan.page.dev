@@ -6,7 +6,8 @@
   --ink: #f4f4f2;
   --dim: #9b9ba4;
   --lime: #d4ff3f;
-  --line: #232328;
+  --line: rgba(212, 255, 63, 0.22);
+  --line-solid: #222912;
 }
 
 * {
@@ -26,6 +27,21 @@ body {
   font-size: 16px;
   line-height: 1.65;
   overflow-x: hidden;
+}
+
+/* Custom Pro Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0b0d;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(212, 255, 63, 0.25);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--lime);
 }
 
 /* Bulletproof Anchor Reset */
@@ -143,7 +159,7 @@ a:hover {
   display: block;
 }
 
-/* Header Navigation */
+/* Glassmorphism Header Navigation Bar */
 nav.top {
   position: fixed;
   top: 0;
@@ -153,8 +169,12 @@ nav.top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 30px 18px 70px;
-  mix-blend-mode: difference;
+  padding: 10px 30px 10px 70px;
+  background: rgba(11, 11, 13, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--line);
+  mix-blend-mode: normal;
 }
 
 nav.top .logo {
@@ -249,11 +269,11 @@ nav.top .links {
 
 /* Typography & Reveals */
 .hero h1 {
-  font-size: clamp(46px, 10vw, 124px);
+  font-size: clamp(40px, 7.5vw, 84px);
   font-weight: 700;
-  line-height: .95;
-  letter-spacing: -.04em;
-  margin: 22px 0;
+  line-height: 1.02;
+  letter-spacing: -.03em;
+  margin: 18px 0;
 }
 
 .hero h1 .line {
@@ -345,7 +365,7 @@ nav.top .links {
    4. SECTIONS & COMPONENTS (Marquee, About, Skills, Experience)
    ========================================================================== */
 section {
-  padding: 110px 0;
+  padding: 64px 0;
 }
 
 .sec-tag {
@@ -357,11 +377,11 @@ section {
 }
 
 h2.big {
-  font-size: clamp(34px, 6vw, 64px);
+  font-size: clamp(28px, 4.5vw, 52px);
   font-weight: 700;
-  letter-spacing: -.03em;
-  line-height: 1.03;
-  margin: 14px 0 44px;
+  letter-spacing: -.025em;
+  line-height: 1.1;
+  margin: 12px 0 36px;
 }
 
 /* Infinite Marquee Loop */
@@ -395,9 +415,9 @@ h2.big {
 
 /* About Section & Counter Grid / Profile Card with 1:1 Image Layout */
 .about p.lede {
-  font-size: clamp(20px, 3vw, 30px);
-  line-height: 1.45;
-  letter-spacing: -.015em;
+  font-size: clamp(17px, 2vw, 22px);
+  line-height: 1.65;
+  letter-spacing: -.01em;
   max-width: 860px;
 }
 
@@ -409,24 +429,27 @@ h2.big {
 /* About Section Grid Layout */
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 320px;
-  gap: 40px;
+  grid-template-columns: 1fr 270px;
+  gap: 36px;
   align-items: center;
   margin-top: 24px;
   margin-bottom: 0;
 }
 
 .profile-card {
-  background: #111114;
+  background: linear-gradient(160deg, #131318 0%, #0d0d10 100%);
   border: 1px solid var(--line);
   border-radius: 16px;
-  padding: 24px;
+  padding: 16px;
   position: relative;
-  transition: .2s;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: all .3s cubic-bezier(.2, .8, .2, 1);
 }
 
 .profile-card:hover {
-  border-color: var(--lime);
+  border-color: rgba(212, 255, 63, 0.5);
+  box-shadow: 0 15px 40px rgba(212, 255, 63, 0.1);
+  transform: translateY(-4px);
 }
 
 /* Profile Image 1:1 Aspect Ratio Styles */
@@ -435,9 +458,10 @@ h2.big {
   aspect-ratio: 1 / 1;
   border-radius: 12px;
   overflow: hidden;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   border: 1px solid var(--line);
   background: #18181c;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
 .profile-img {
@@ -452,9 +476,9 @@ h2.big {
   align-items: center;
   gap: 8px;
   font-family: 'JetBrains Mono', monospace;
-  font-size: 11.5px;
+  font-size: 11px;
   color: var(--lime);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .profile-status .dot {
@@ -463,19 +487,25 @@ h2.big {
   background: var(--lime);
   border-radius: 50%;
   box-shadow: 0 0 8px var(--lime);
+  animation: pulse-glow 2s infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 6px var(--lime); }
+  50% { box-shadow: 0 0 14px var(--lime); }
 }
 
 .profile-card h3 {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   color: var(--ink);
 }
 
 .profile-role {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 12.5px;
+  font-size: 11.5px;
   color: var(--dim);
-  margin-bottom: 10px;
+  margin-bottom: 4px;
 }
 
 .profile-desc {
@@ -492,9 +522,18 @@ h2.big {
 }
 
 .stat {
+  background: rgba(17, 17, 20, 0.6);
+  backdrop-filter: blur(8px);
   border: 1px solid var(--line);
   border-radius: 14px;
   padding: 22px;
+  transition: all .25s ease;
+}
+
+.stat:hover {
+  border-color: var(--lime);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(212, 255, 63, 0.08);
 }
 
 .stat b {
@@ -606,7 +645,7 @@ h2.big {
 .card {
   position: sticky;
   top: 100px;
-  background: #111114;
+  background: linear-gradient(160deg, #121216 0%, #0e0e11 100%);
   border: 1px solid var(--line);
   border-radius: 20px;
   padding: 40px;
@@ -614,6 +653,13 @@ h2.big {
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 20px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4);
+  transition: all .3s cubic-bezier(.2, .8, .2, 1);
+}
+
+.card:hover {
+  border-color: rgba(212, 255, 63, 0.45);
+  box-shadow: 0 20px 45px rgba(212, 255, 63, 0.1);
 }
 
 .card .id {
@@ -623,14 +669,17 @@ h2.big {
 }
 
 .card h3 {
-  font-size: clamp(24px, 3.6vw, 38px);
+  font-size: clamp(22px, 3vw, 32px);
   font-weight: 700;
-  letter-spacing: -.025em;
+  line-height: 1.2;
+  letter-spacing: -.02em;
   margin: 10px 0 14px;
   max-width: 100%;
 }
 
 .card p {
+  font-size: 15px;
+  line-height: 1.65;
   color: var(--dim);
   max-width: 100%;
   text-align: justify;
@@ -734,18 +783,21 @@ h2.big {
   display: block;
   width: 100%;
   margin-top: 7px;
-  background: #131316;
+  background: rgba(19, 19, 22, 0.8);
+  backdrop-filter: blur(8px);
   border: 1px solid var(--line);
   border-radius: 12px;
   color: var(--ink);
   font-family: 'Space Grotesk', sans-serif;
   font-size: 15.5px;
   padding: 12px 14px;
+  transition: all .25s ease;
 }
 
 .cform input:focus, .cform textarea:focus {
   outline: none;
   border-color: var(--lime);
+  box-shadow: 0 0 20px rgba(212, 255, 63, 0.18);
 }
 
 .cform .btn {
@@ -826,7 +878,7 @@ footer {
   
   /* Mobile Menu System Override */
   nav.top {
-    padding-left: 44px;
+    padding: 10px 20px 10px 44px;
     mix-blend-mode: normal;
     background: rgba(11, 11, 13, .9);
     backdrop-filter: blur(10px);
@@ -869,6 +921,24 @@ footer {
   .bar {
     display: none;
   }
+
+  /* Mobile — all section text justify */
+  .hero-content p,
+  .about p.lede,
+  .xp p,
+  .card p,
+  .card .win,
+  .contact p,
+  .cform label,
+  section p {
+    text-align: justify;
+  }
+
+  /* Section headings centered on mobile */
+  .sec-tag,
+  h2.big {
+    text-align: left;
+  }
 }
 
 @media(max-width: 640px) {
@@ -897,8 +967,7 @@ footer {
     padding-right: 16px;
   }
   nav.top {
-    padding-left: 28px;
-    padding-right: 18px;
+    padding: 8px 16px 8px 28px;
   }
   .hero h1 {
     font-size: clamp(38px, 11vw, 56px);
