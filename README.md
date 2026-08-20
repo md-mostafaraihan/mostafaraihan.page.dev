@@ -1,4 +1,4 @@
-﻿# 🌐 MD. Mostafa Raihan — Portfolio Website
+# 🌐 MD. Mostafa Raihan — Portfolio Website
 
 <div align="center">
 
@@ -108,7 +108,7 @@ To run locally, open `index.html` in any modern browser. No build step required.
 
 ```bash
 # Clone the repo
-git clone https://github.com/m-mostafaraihan/networkingwithraihan.git
+git clone https://github.com/md-mostafaraihan/networkingwithraihan.git
 
 # Open locally
 start index.html
@@ -134,8 +134,8 @@ start index.html
 |---|---|
 | 🌐 Website | [mostafaraihan.pages.dev](https://mostafaraihan.pages.dev) |
 | 📧 Email | [mostafa.raihan07@gmail.com](mailto:mostafa.raihan07@gmail.com) |
-| 💼 LinkedIn | [m-mostafaraihan](https://www.linkedin.com/in/m-mostafaraihan) |
-| 🐙 GitHub | [m-mostafaraihan](https://github.com/m-mostafaraihan) |
+| 💼 LinkedIn | [md-mostafaraihan](https://www.linkedin.com/in/md-mostafaraihan) |
+| 🐙 GitHub | [md-mostafaraihan](https://github.com/md-mostafaraihan) |
 | 📘 Facebook | [m.mostafaraihan](https://facebook.com/m.mostafaraihan) |
 | 📍 Location | Feni, Bangladesh |
 
