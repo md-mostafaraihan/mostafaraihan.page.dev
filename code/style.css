@@ -73,10 +73,6 @@ a:hover {
   color: #0b0b0d;
 }
 
-.mono {
-  font-family: 'JetBrains Mono', monospace;
-}
-
 .reveal {
   opacity: 0;
   transform: translateY(30px);
@@ -486,25 +482,6 @@ h2.big {
   display: block;
 }
 
-.profile-status {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
-  color: var(--lime);
-  margin-bottom: 10px;
-}
-
-.profile-status .dot {
-  width: 8px;
-  height: 8px;
-  background: var(--lime);
-  border-radius: 50%;
-  box-shadow: 0 0 8px var(--lime);
-  animation: pulse-glow 2s infinite;
-}
-
 @keyframes pulse-glow {
 
   0%,
@@ -528,12 +505,6 @@ h2.big {
   font-size: 11.5px;
   color: var(--dim);
   margin-bottom: 4px;
-}
-
-.profile-desc {
-  font-size: 14px;
-  color: var(--dim);
-  line-height: 1.5;
 }
 
 .stats {
@@ -853,64 +824,246 @@ footer {
   font-family: 'JetBrains Mono', monospace;
 }
 
-
 /* ==========================================================================
-   7. RESPONSIVE QUERIES & BREAKPOINTS
+   7. RESPONSIVE — TABLET & MOBILE ONLY
    ========================================================================== */
-@media(max-width: 1000px) {
-  .mobilegap {
-    display: block;
-    height: 25px;
-  }
-}
 
-@media(max-width: 900px) {
-  .mail {
-    font-size: 30px;
-  }
-}
+/* =========================
+   TABLET — 1024px to 769px
+   ========================= */
+@media (max-width: 1024px) {
 
-@media(max-width: 850px) {
+  .wrap {
+    max-width: 100%;
+    padding-left: 80px;
+    padding-right: 28px;
+  }
+
+  nav.top {
+    padding-left: 65px;
+    padding-right: 28px;
+  }
+
+  .hero {
+    min-height: 100svh;
+    padding-top: 80px;
+  }
+
+  .hero h1 {
+    font-size: clamp(52px, 8vw, 72px);
+  }
+
+  .hero p {
+    max-width: 600px;
+    font-size: 16px;
+  }
+
   .about-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr) 240px;
+    gap: 28px;
+  }
+
+  .stats {
+    gap: 12px;
+    margin-top: 42px;
+  }
+
+  .stat {
+    padding: 18px;
+  }
+
+  .skillrows .row {
+    grid-template-columns: 200px minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .card {
+    padding: 32px;
+    min-height: 260px;
+  }
+
+  .card h3 {
+    font-size: clamp(22px, 3vw, 30px);
+  }
+
+  .card .n {
+    font-size: clamp(56px, 9vw, 82px);
+  }
+
+  .cform {
+    max-width: 100%;
+  }
+
+  footer {
+    padding-left: 80px;
+    padding-right: 28px;
+  }
+}
+
+
+/* =========================
+   TABLET — 900px
+   ========================= */
+@media (max-width: 900px) {
+
+  .wrap {
+    padding-left: 68px;
+    padding-right: 24px;
+  }
+
+  nav.top {
+    padding-left: 58px;
+    padding-right: 24px;
+  }
+
+  .hero h1 {
+    font-size: clamp(48px, 8vw, 68px);
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr 220px;
     gap: 24px;
   }
-}
 
-@media(max-width: 760px) {
   .stats {
     grid-template-columns: repeat(2, 1fr);
   }
 
   .skillrows .row {
+    grid-template-columns: 180px 1fr;
+  }
+
+  .mail {
+    font-size: clamp(28px, 5vw, 38px);
+  }
+
+  footer {
+    padding-left: 68px;
+    padding-right: 24px;
+  }
+}
+
+
+/* =========================
+   SMALL TABLET / LARGE MOBILE
+   768px
+   ========================= */
+@media (max-width: 768px) {
+
+  #spine {
+    left: 18px;
+  }
+
+  .wrap {
+    padding-left: 52px;
+    padding-right: 22px;
+  }
+
+  nav.top {
+    padding: 10px 20px 10px 46px;
+  }
+
+  nav.top .links {
+    gap: 16px;
+    font-size: 13px;
+  }
+
+  .hero {
+    min-height: 100svh;
+    padding-top: 80px;
+  }
+
+  .hero h1 {
+    font-size: clamp(44px, 9vw, 62px);
+  }
+
+  .hero p {
+    max-width: 100%;
+    font-size: 16px;
+  }
+
+  .hero .btns {
+    margin-top: 28px;
+  }
+
+  .about-grid {
     grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .profile-card {
+    width: min(100%, 280px);
+  }
+
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 40px;
+  }
+
+  .stat {
+    padding: 18px;
+  }
+
+  .skillrows .row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 24px 0;
+  }
+
+  .skillrows h3 {
+    font-size: 20px;
   }
 
   .card {
     grid-template-columns: 1fr;
     padding: 28px;
-  }
-}
-
-@media(max-width: 720px) {
-  #spine {
-    left: 16px;
+    min-height: auto;
+    top: 85px;
   }
 
-  .wrap {
-    padding-left: 48px;
+  .card .n {
+    order: -1;
+    font-size: 58px;
+  }
+
+  .xp {
+    grid-template-columns: 110px 1fr;
+    gap: 16px;
+  }
+
+  .cform-row {
+    grid-template-columns: 1fr 1fr;
   }
 
   footer {
-    padding-left: 48px;
+    padding-left: 52px;
+    padding-right: 22px;
+  }
+}
+
+
+/* =========================
+   MOBILE — 720px
+   ========================= */
+@media (max-width: 720px) {
+
+  #spine {
+    left: 14px;
   }
 
-  /* Mobile Menu System Override */
+  .wrap {
+    padding-left: 42px;
+    padding-right: 18px;
+    width: 100%;
+  }
+
   nav.top {
-    padding: 10px 20px 10px 44px;
-    mix-blend-mode: normal;
-    background: rgba(11, 11, 13, .9);
-    backdrop-filter: blur(10px);
+    padding: 9px 16px 9px 38px;
+  }
+
+  nav.top .logo {
+    font-size: 15px;
   }
 
   .menu-btn {
@@ -920,15 +1073,17 @@ footer {
   nav.top .links {
     display: none;
     position: absolute;
-    top: calc(100% + 6px);
+    top: calc(100% + 8px);
     right: 14px;
+    left: auto;
     flex-direction: column;
     gap: 0;
+    min-width: 200px;
+    padding: 8px;
     background: #141418;
     border: 1px solid var(--line);
     border-radius: 14px;
-    padding: 8px;
-    min-width: 190px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .45);
   }
 
   nav.top .links.open {
@@ -936,90 +1091,442 @@ footer {
   }
 
   nav.top .links a {
-    padding: 12px 16px;
-    font-size: 15px;
+    display: block;
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 14px;
   }
 
-  /* Hero Content adjustments for viewport scale */
+  .hero {
+    min-height: 100svh;
+    padding-top: 90px;
+    padding-bottom: 70px;
+  }
+
+  .hero-content {
+    width: 100%;
+  }
+
   .hero .tag {
     flex-direction: column;
     align-items: flex-start;
-    gap: 0;
-    line-height: 1.1;
+    gap: 2px;
+    line-height: 1.2;
+    font-size: 11px;
   }
 
-  .hero .tag .title {
-    padding-top: 0;
-    margin-top: -2px;
+  .hero .tag .name {
+    font-size: 1.35em;
   }
 
-  .bar {
-    display: none;
+  .hero h1 {
+    font-size: clamp(40px, 11vw, 58px);
+    line-height: 1.04;
+    margin: 16px 0;
   }
 
-  /* Mobile — all section text justify */
-  .hero-content p,
-  .about p.lede,
-  .xp p,
-  .card p,
-  .card .win,
-  .contact p,
-  .cform label,
-  section p {
-    text-align: justify;
+  .hero p {
+    max-width: 100%;
+    font-size: 15px;
+    line-height: 1.65;
   }
 
-  /* Section headings centered on mobile */
-  .sec-tag,
+  .hero .btns {
+    gap: 10px;
+    margin-top: 26px;
+  }
+
+  .btn {
+    padding: 12px 22px;
+    font-size: 14px;
+  }
+
+  .scroll-hint {
+    bottom: 18px;
+    font-size: 9px;
+  }
+
+  section {
+    padding: 52px 0;
+  }
+
   h2.big {
-    text-align: left;
+    font-size: clamp(30px, 8vw, 42px);
+    margin-bottom: 28px;
   }
-}
 
-@media(max-width: 640px) {
+  .sec-tag {
+    font-size: 11px;
+  }
+
+  .about p.lede {
+    font-size: 17px;
+    line-height: 1.65;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .profile-card {
+    width: min(100%, 260px);
+    margin: 0 auto;
+  }
+
+  .stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 34px;
+  }
+
+  .stat {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .stat b {
+    font-size: 32px;
+  }
+
+  .stat span {
+    font-size: 12px;
+  }
+
+  .marquee {
+    margin-top: 10px;
+    padding: 14px 0;
+  }
+
+  .marquee .track {
+    gap: 30px;
+    font-size: 12px;
+  }
+
+  .skillrows .row {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 22px 0;
+  }
+
+  .skillrows h3 {
+    font-size: 19px;
+  }
+
+  .tags {
+    gap: 8px;
+  }
+
+  .tag {
+    padding: 7px 14px;
+    font-size: 13px;
+  }
+
   .xp {
     grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 22px 0;
   }
-}
 
-@media(max-width: 560px) {
+  .xp .yrs {
+    font-size: 12px;
+  }
+
+  .xp h3 {
+    font-size: 19px;
+  }
+
+  .xp .org,
+  .xp p {
+    font-size: 14px;
+  }
+
+  .card {
+    grid-template-columns: 1fr;
+    padding: 24px 20px;
+    min-height: auto;
+    border-radius: 16px;
+    top: 76px;
+  }
+
+  .card .n {
+    order: -1;
+    font-size: 54px;
+    margin-bottom: -4px;
+  }
+
+  .card h3 {
+    font-size: clamp(22px, 7vw, 30px);
+  }
+
+  .card p {
+    font-size: 14px;
+  }
+
+  .card .win {
+    font-size: 14px;
+  }
+
+  .project-btn {
+    padding: 9px 20px;
+    font-size: 12px;
+  }
+
+  .contact {
+    padding-bottom: 55px;
+  }
+
   .mail {
-    font-size: 20px;
-    letter-spacing: -0.02em;
-    border-bottom-width: 2px;
+    display: block;
+    width: fit-content;
+    max-width: 100%;
+    font-size: clamp(21px, 6vw, 30px);
+    margin: 14px 0 28px;
+  }
+
+  .meta {
+    gap: 9px;
+  }
+
+  .meta span,
+  .meta a {
+    padding: 8px 14px;
+    font-size: 12px;
+  }
+
+  .cform {
+    max-width: 100%;
+    margin-top: 34px;
   }
 
   .cform-row {
     grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .cform input,
+  .cform textarea {
+    font-size: 14px;
+    padding: 11px 13px;
+  }
+
+  footer {
+    padding: 24px 18px 24px 42px;
+    font-size: 11px;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .marker {
+    right: 12px;
+    bottom: 14px;
   }
 }
 
-@media(max-width: 480px) {
-  #spine {
-    left: 12px;
-  }
 
-  .wrap,
-  footer {
-    padding-left: 32px;
+/* =========================
+   SMALL MOBILE — 560px
+   ========================= */
+@media (max-width: 560px) {
+
+  .wrap {
+    padding-left: 38px;
     padding-right: 16px;
   }
 
   nav.top {
-    padding: 8px 16px 8px 28px;
+    padding-left: 34px;
+    padding-right: 14px;
   }
 
   .hero h1 {
-    font-size: clamp(38px, 11vw, 56px);
+    font-size: clamp(38px, 11vw, 54px);
+  }
+
+  .hero p {
+    font-size: 14.5px;
+  }
+
+  .hero .btns {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn {
+    width: auto;
+    text-align: center;
+  }
+
+  .stats {
+    gap: 8px;
+  }
+
+  .stat {
+    padding: 14px;
+  }
+
+  .stat b {
+    font-size: 28px;
+  }
+
+  .stat span {
+    font-size: 11px;
+  }
+
+  .profile-card {
+    width: min(100%, 240px);
   }
 
   .card {
-    padding: 22px 18px;
-    top: 75px;
+    padding: 22px 17px;
+  }
+
+  .card .n {
+    font-size: 48px;
+  }
+
+  .mail {
+    font-size: clamp(19px, 6vw, 25px);
+    letter-spacing: -.02em;
+    border-bottom-width: 2px;
+  }
+
+  .cform .btn {
+    width: 100%;
+  }
+
+  footer {
+    padding-left: 38px;
+    padding-right: 16px;
+  }
+}
+
+
+/* =========================
+   VERY SMALL MOBILE — 400px
+   ========================= */
+@media (max-width: 400px) {
+
+  #spine {
+    left: 10px;
+  }
+
+  .wrap {
+    padding-left: 28px;
+    padding-right: 14px;
+  }
+
+  nav.top {
+    padding-left: 24px;
+    padding-right: 12px;
+  }
+
+  nav.top .logo {
+    font-size: 14px;
+  }
+
+  .menu-btn {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+
+  .hero {
+    padding-top: 85px;
+  }
+
+  .hero h1 {
+    font-size: clamp(35px, 11vw, 48px);
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .stat b {
+    font-size: 25px;
+  }
+
+  .stat span {
+    font-size: 10px;
+  }
+
+  .tag {
+    font-size: 12px;
+  }
+
+  .card {
+    padding: 20px 15px;
+    top: 70px;
+  }
+
+  .card h3 {
+    font-size: 21px;
+  }
+
+  .card p {
+    font-size: 13.5px;
+  }
+
+  .mail {
+    font-size: 18px;
+  }
+
+  footer {
+    padding-left: 28px;
+    padding-right: 14px;
   }
 
   .marker {
-    right: 14px;
-    bottom: 16px;
+    right: 9px;
+    bottom: 12px;
   }
+}
+
+
+/* =========================
+   TOUCH DEVICES
+   ========================= */
+@media (hover: none) and (pointer: coarse) {
+
+  .profile-card:hover,
+  .stat:hover,
+  .card:hover,
+  .btn.solid:hover,
+  .tag:hover {
+    transform: none;
+  }
+
+  .xp:hover {
+    padding-left: 0;
+  }
+
+  a,
+  button {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+}
+
+
+/* =========================
+   REDUCED MOTION
+   ========================= */
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+
 }
