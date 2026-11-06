@@ -1,106 +1,161 @@
+
 <div align="center">
 
-# 🌐 Md. Mostafa Raihan
-## Junior Network Engineer & System Administrator
+# 🔷 Md. Mostafa Raihan
 
-[![Live Site](https://img.shields.io/badge/🚀%20Live%20Site-mostafaraihan.pages.dev-d4ff3f?style=for-the-badge&labelColor=0b0b0d&color=d4ff3f)](https://mostafaraihan.pages.dev)
-[![GitHub](https://img.shields.io/badge/GitHub-md--mostafaraihan-d4ff3f?style=for-the-badge&logo=github&labelColor=0b0b0d&color=d4ff3f)](https://github.com/md-mostafaraihan)
-[![Cloudflare Pages](https://img.shields.io/badge/Deployed%20on-Cloudflare%20Pages-d4ff3f?style=flat-square&labelColor=0b0b0d)](https://pages.cloudflare.com)
+### Junior Network Engineer | Cisco Networking | CCNA Learner
+
+<p>
+  <img src="https://img.shields.io/badge/Cisco-Networking-0496FF?style=for-the-badge&logo=cisco&logoColor=white">
+  <img src="https://img.shields.io/badge/Routing-Switching-1565C0?style=for-the-badge&logo=cisco&logoColor=white">
+  <img src="https://img.shields.io/badge/Windows-Linux-1976D2?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Network-Security-D32F2F?style=for-the-badge">
+</p>
+
+<p>
+  <b>🖧 Routing</b> &nbsp; • &nbsp;
+  <b>🔀 Switching</b> &nbsp; • &nbsp;
+  <b>🛡️ Network Security</b> &nbsp; • &nbsp;
+  <b>💻 System Support</b>
+</p>
+
+<i>"Learn. Configure. Troubleshoot. Grow."</i>
 
 </div>
 
 ---
 
-## 👨‍💻 About / Summary
+<h2 align="center">👨‍💻 Professional Profile</h2>
 
-Junior Network Engineer with strong hands-on experience in Cisco routing/switching, Layer-2 security, and Windows system administration from One Sky Communications Limited. Driven by problem-solving and eager to contribute to enterprise IT operations in a Network Support, NOC, or Systems Administrator role.
+<p align="center">
+  I am an aspiring Network Engineer with a strong interest in Cisco
+  networking, routing, switching, and system administration.
+  My technical knowledge includes Cisco router and Catalyst switch
+  configuration, OSPF, BGP, RIP, EIGRP, VLANs, Inter-VLAN Routing,
+  NAT/PAT, and network security.
 
----
-
-## 🎯 Core Technical Competencies
-
-### Domain 01: Cisco Networking & Technology
-*Core Routing, Switching, Subnetting, and Perimeter Security based on Cisco Packet Tracer Labs.*
-- **Networking & IP Fundamentals:** OSI 7-Layer & TCP/IP Model, Ethernet Standards, MAC Addressing, Cable Types (Straight-Through / Crossover).
-- **IP Addressing & Subnetting:** IPv4 Addressing, Subnetting (FLSM & VLSM), Public vs Private IP (RFC 1918), DNS Basics, IPv6 Fundamentals.
-- **Routing & Diagnostics:** Ping, Traceroute, Static & Default Routing, BGP Basics, OSPF (Single & Multi-Area), RIP & EIGRP Basics.
-- **Switching & Layer-2:** Cisco Catalyst Switching, VLAN Segmentation, IEEE 802.1Q Trunking, Inter-VLAN Routing (Router-on-a-Stick), Spanning Tree Protocol (STP), EtherChannel (LACP).
-- **Security & Network Services:** Standard & Extended ACLs, NAT (Static, Dynamic, PAT), Layer-2 Security (Port Security, DHCP Snooping, BPDU Guard), IPsec VPN Basics, First Hop Redundancy (HSRP/VRRP).
-
-### Domain 02: Computer Hardware, Windows & System Administration
-*Bare-metal hardware troubleshooting, Windows enterprise client management, and remote IT support.*
-- **Computer Hardware & Diagnostics:** Desktop Assembly, Motherboard & RAM Installation, BIOS/UEFI Setup, POST Diagnostics & Troubleshooting, Storage Configuration (SSD/HDD).
-- **Windows Deployment & Setup:** Windows 11 Installation, Partitioning (GPT/MBR), Driver Integration, Software Installation.
-- **System Administration:** Local User & Administrator Account Management, Local Group Policy (gpedit.msc), Password & Lockout Policies, Network Printer Setup & Sharing, Shared Folders & Permissions (SMB/NTFS).
-- **Remote Support & Recovery:** Remote Desktop (RDP), AnyDesk Remote Assistance, Windows Startup Repair, Event Viewer Analysis, Blue Screen (BSOD) Error Troubleshooting.
+  I also have knowledge of Windows, Linux, PC hardware troubleshooting,
+  and system maintenance. I am passionate about networking and
+  continuously improving my technical skills.
+</p>
 
 ---
 
-## 🏗️ Hands-On Enterprise Projects
+<h2 align="center">🔷 Cisco Networking Skills</h2>
 
-| # | Project | Domain & Key Technologies | Focus & Impact |
-|---|---|---|---|
-| 01 | **Multi-Protocol Enterprise WAN Routing Architecture** | Cisco Routing: OSPFv2/v3, BGP, Static/Floating Routes, SLA | Multi-area OSPF design, ISP edge BGP peering, and sub-second automatic route failover. |
-| 02 | **Campus Switching, VLAN Segmentation & Layer-2 Security** | Cisco Switching: VLANs, 802.1Q, SVI, Port Security, DHCP Snooping, DAI, BPDU Guard | Departmental traffic segmentation, rogue DHCP mitigation, and Layer-2 anti-spoofing defense. |
-| 03 | **High-Availability Gateway Redundancy & Link Aggregation** | Cisco Redundancy: HSRP, VRRP, GLBP, EtherChannel (LACP), Rapid PVST+ | Fault-tolerant default gateway failover (<2.5s) and dual-link bandwidth aggregation. |
-| 04 | **Perimeter Security, Dynamic NAT/PAT & Site-to-Site IPsec VPN** | Security: Extended ACLs, Dynamic PAT, Static NAT, IPsec VPN (IKEv2, AES-256) | Zero-trust perimeter traffic filtering, RFC 1918 IPv4 conservation, and encrypted WAN tunneling. |
-| 05 | **Enterprise Windows 11 Deployment & Group Policy Hardening** | Windows Admin: Windows 11, GPT/UEFI, Local GPO, UAC, Audit Policies | Standardized enterprise OS baseline, account lockout policies, and USB/SMBv1 attack surface reduction. |
-| 06 | **Network Resource Provisioning, Print Spooler & Access Control** | Resource Sharing: Network Printing (TCP/IP), Print Spooler, SMB Shares, NTFS vs Share Permissions | Multi-subnet printer deployment, driver isolation, and confidential Access-Based Enumeration (ABE). |
-| 07 | **Bare-Metal PC Architecture, Assembly & Advanced POST Diagnostics** | Hardware: Motherboard, CPU/RAM Sizing, SMPS Rails, POST Analysis, BSOD Dump Analysis | Component bench-testing, diagnostic Q-LED/beep analysis, and Windows kernel crash dump resolution. |
-| 08 | **Enterprise Remote Management & Network Automation Sandbox** | Automation: RDP (NLA), AnyDesk, WinRM, Cisco IOS Automation, Ansible, REST APIs, JSON | Centralized remote support and automated configuration auditing/backup across enterprise network nodes. |
+<p align="center">
+  <img src="https://img.shields.io/badge/Cisco_Routers-0496FF?style=flat-square&logo=cisco&logoColor=white">
+  <img src="https://img.shields.io/badge/Catalyst_Switches-1565C0?style=flat-square&logo=cisco&logoColor=white">
+  <img src="https://img.shields.io/badge/Networking_Fundamentals-1976D2?style=flat-square">
+  <img src="https://img.shields.io/badge/OSI_%26_TCP%2FIP-0277BD?style=flat-square">
+  <img src="https://img.shields.io/badge/Ethernet-0288D1?style=flat-square">
+  <img src="https://img.shields.io/badge/MAC_Addressing-3949AB?style=flat-square">
+</p>
+
+<h2 align="center">🌐 IP Addressing & Routing</h2>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/IPv4_%2F_IPv6-00599C?style=flat-square">
+  <img src="https://img.shields.io/badge/Subnetting_FLSM%2FVLSM-1565C0?style=flat-square">
+  <img src="https://img.shields.io/badge/Static_Routing-1976D2?style=flat-square">
+  <img src="https://img.shields.io/badge/Default_Routing-0288D1?style=flat-square">
+  <img src="https://img.shields.io/badge/OSPF_Single%2FMulti_Area-2E7D32?style=flat-square">
+  <img src="https://img.shields.io/badge/BGP-388E3C?style=flat-square">
+  <img src="https://img.shields.io/badge/RIP-43A047?style=flat-square">
+  <img src="https://img.shields.io/badge/EIGRP-00897B?style=flat-square">
+</p>
+
+<h2 align="center">🔀 Switching & VLAN</h2>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/VLAN_Configuration-0277BD?style=flat-square">
+  <img src="https://img.shields.io/badge/Inter--VLAN_Routing-0288D1?style=flat-square">
+  <img src="https://img.shields.io/badge/802.1Q_Trunking-1565C0?style=flat-square">
+  <img src="https://img.shields.io/badge/STP-2E7D32?style=flat-square">
+  <img src="https://img.shields.io/badge/EtherChannel_Basics-00897B?style=flat-square">
+</p>
+
+<h2 align="center">🛡️ Network Security & Services</h2>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Standard_ACL-D32F2F?style=flat-square">
+  <img src="https://img.shields.io/badge/Extended_ACL-C62828?style=flat-square">
+  <img src="https://img.shields.io/badge/NAT_%2F_PAT-6A1B9A?style=flat-square">
+  <img src="https://img.shields.io/badge/Port_Security-AD1457?style=flat-square">
+  <img src="https://img.shields.io/badge/DHCP-00838F?style=flat-square">
+  <img src="https://img.shields.io/badge/DNS_Basics-006064?style=flat-square">
+  <img src="https://img.shields.io/badge/Network_Troubleshooting-2E7D32?style=flat-square">
+</p>
+
+<h2 align="center">💻 Computer Hardware & System Administration</h2>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/PC_Assembly-455A64?style=flat-square">
+  <img src="https://img.shields.io/badge/RAM_%26_SSD-546E7A?style=flat-square">
+  <img src="https://img.shields.io/badge/BIOS_%2F_UEFI-607D8B?style=flat-square">
+  <img src="https://img.shields.io/badge/Hardware_Troubleshooting-455A64?style=flat-square">
+  <img src="https://img.shields.io/badge/Windows-0078D4?style=flat-square&logo=windows&logoColor=white">
+  <img src="https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black">
+  <img src="https://img.shields.io/badge/Remote_Support-1976D2?style=flat-square">
+</p>
+
+<h2 align="center">🧪 Networking Labs & Tools</h2>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Cisco_Packet_Tracer-CC0000?style=for-the-badge&logo=cisco&logoColor=white">
+  <img src="https://img.shields.io/badge/Cisco_CLI-414141?style=for-the-badge&logo=cisco&logoColor=white">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Ping-Network_Testing-2E7D32?style=flat-square">
+  <img src="https://img.shields.io/badge/Traceroute-Path_Analysis-00838F?style=flat-square">
+  <img src="https://img.shields.io/badge/Command_Line-414141?style=flat-square">
+</p>
+
+<h2 align="center">📊 Technology Stack</h2>
+
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=cisco,linux,bash,windows,git,github,vscode">
+  </a>
+</p>
 
 ---
 
-## 💼 Professional Experience
+<h2 align="center">📊 GitHub Overview</h2>
 
-| Role | Organization | Period | Core Responsibilities |
-|---|---|---|---|
-| **Assistant Faculty & Lab Network Administrator** | One Sky Communications Limited | Oct 2026 — Present | Instructing Cisco networking topologies, managing lab workstations, configuring Windows client policies, printer sharing, and hardware diagnostics. |
-| **Industrial Attachment — Network & Systems Engineering** | One Sky Communications Limited | Oct 2026 | Practical Cisco routing/switching configuration (OSPF, VLANs, ACLs, NAT), bare-metal PC assembly, OS deployment, and layered OSI troubleshooting. |
-
----
-
-## 🎓 Education & Certifications
-
-### Education
-- **Diploma in Computer Science & Technology** | Institute of Computer Science and Technology (ICST), Feni | 2023 — 2027
-- **Secondary School Certificate (SSC)** | Chhagalnaiya Academy | 2020 — 2022
-
-### Certifications & Career Pathways
-- 🎯 **Cisco Certified Network Associate (CCNA 200-301)** — *Candidate Pathway / Active Preparation*
-- 🎯 **MikroTik Certified Network Associate (MTCNA)** — *Practical Routing & RouterOS Track*
-- 📜 **Industrial Attachment Certificate in Enterprise Networking & Systems** — *One Sky Communications Limited* (2026)
-
-### Career Objective
-> "To leverage hands-on technical expertise in Cisco enterprise routing and switching, network security protocols, Windows system administration, and computer hardware diagnostics as a Network Engineer & System Administrator. Committed to pursuing CCNA and MikroTik credentials, automating enterprise infrastructure, and engineering high-availability, zero-downtime IT environments."
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=md-mostafaraihan&show_icons=true&theme=tokyonight&hide_border=true" alt="GitHub Stats">
+</p>
 
 ---
 
-## 🛠️ Tech Stack & Implementation
+<h2 align="center">🔗 Connect With Me</h2>
 
-```
-Frontend Architecture  → Semantic HTML5, CSS3 Custom Properties, Responsive Vanilla JavaScript
-Interactive 3D Engine  → Three.js r128 WebGL Spine-Leaf Network Mesh with Real-Time Dynamic Packets
-Form Delivery          → EmailJS Browser SDK Integration with Graceful Fallbacks
-Hosting & CDN          → Cloudflare Pages Global Edge Network
-SEO & Verification     → Schema.org JSON-LD (Person/ProfilePage/WebSite), Open Graph, Twitter Cards, Google Search Console
-```
+<p align="center">
+  <a href="https://github.com/md-mostafaraihan">
+    <img src="https://img.icons8.com/color/96/github.png" width="48" alt="GitHub">
+  </a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://www.linkedin.com/in/md-mostafaraihan">
+    <img src="https://img.icons8.com/color/96/linkedin.png" width="48" alt="LinkedIn">
+  </a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://mostafaraihan.pages.dev">
+    <img src="https://img.icons8.com/color/96/domain.png" width="48" alt="Portfolio">
+  </a>
+</p>
 
----
-
-## 📬 Contact Information
-
-- 🌐 **Portfolio Website**: [mostafaraihan.pages.dev](https://mostafaraihan.pages.dev)
-- 📧 **Direct Email**: [mostafa.raihan07@gmail.com](mailto:mostafa.raihan07@gmail.com)
-- 🐙 **GitHub**: [md-mostafaraihan](https://github.com/md-mostafaraihan)
-- 📍 **Location**: Feni, Bangladesh
-
----
+<p align="center">
+  <b>🔷 Cisco Networking • Routing • Switching • System Support</b>
+  <br>
+  <i>Open to networking opportunities, technical collaboration, and continuous learning.</i>
+</p>
 
 <div align="center">
 
-**© 2026 Md. Mostafa Raihan — Junior Network Engineer & System Administrator**
+🔷 CONNECT • CONFIGURE • TROUBLESHOOT • LEARN
 
-*Engineered with precision using pure HTML5 · CSS3 · Modern JavaScript · Three.js*
+**Md. Mostafa Raihan | Junior Network Engineer**
 
 </div>
