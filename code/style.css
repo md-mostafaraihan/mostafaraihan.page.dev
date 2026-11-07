@@ -264,15 +264,6 @@ nav.top .links {
   gap: 5px;
 }
 
-.hero .tag .name {
-  font-size: 1.4em;
-  font-family: Arial, sans-serif;
-}
-
-.hero .tag .bar {
-  font-family: Arial, sans-serif;
-}
-
 /* Typography & Reveals */
 .hero h1 {
   font-size: clamp(40px, 7.5vw, 84px);
@@ -511,41 +502,6 @@ h2.big {
   margin-bottom: 4px;
 }
 
-.stats {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 14px;
-  margin-top: 56px;
-}
-
-.stat {
-  background: rgba(17, 17, 20, 0.6);
-  backdrop-filter: blur(8px);
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: 22px;
-  transition: all .25s ease;
-}
-
-.stat:hover {
-  border-color: var(--lime);
-  transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(212, 255, 63, 0.08);
-}
-
-.stat b {
-  font-size: clamp(28px, 4vw, 44px);
-  font-weight: 700;
-  color: var(--lime);
-  letter-spacing: -.03em;
-  display: block;
-}
-
-.stat span {
-  font-size: 13px;
-  color: var(--dim);
-}
-
 /* Domain Section Banners */
 .domain-banner {
   border-top: 2px solid var(--lime);
@@ -558,15 +514,6 @@ h2.big {
 
 .domain-banner:first-of-type {
   margin-top: 10px;
-}
-
-.domain-banner .domain-badge {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: var(--lime);
-  letter-spacing: 0.12em;
 }
 
 .domain-banner h3 {
@@ -680,6 +627,7 @@ h2.big {
 .card {
   position: sticky;
   top: 100px;
+  width: 100%;
   background: linear-gradient(160deg, #121216 0%, #0e0e11 100%);
   border: 1px solid var(--line);
   border-radius: 20px;
@@ -690,6 +638,27 @@ h2.big {
   gap: 20px;
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4);
   transition: all .3s cubic-bezier(.2, .8, .2, 1);
+  overflow: hidden;
+}
+
+.card.custom-bg-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://raw.githubusercontent.com/md-mostafaraihan/Multi-Area-OSPF-Configuration/refs/heads/master/MutiareaOSPF.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.10;
+  z-index: 1;
+}
+
+.card>div,
+.card>span.n {
+  position: relative;
+  z-index: 2;
 }
 
 .card:hover {
@@ -905,15 +874,6 @@ footer {
     gap: 28px;
   }
 
-  .stats {
-    gap: 12px;
-    margin-top: 42px;
-  }
-
-  .stat {
-    padding: 18px;
-  }
-
   .skillrows .row {
     grid-template-columns: 200px minmax(0, 1fr);
     gap: 18px;
@@ -965,10 +925,6 @@ footer {
   .about-grid {
     grid-template-columns: 1fr 220px;
     gap: 24px;
-  }
-
-  .stats {
-    grid-template-columns: repeat(2, 1fr);
   }
 
   .skillrows .row {
@@ -1035,16 +991,6 @@ footer {
 
   .profile-card {
     width: min(100%, 280px);
-  }
-
-  .stats {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-    margin-top: 40px;
-  }
-
-  .stat {
-    padding: 18px;
   }
 
   .skillrows .row {
@@ -1216,25 +1162,6 @@ footer {
     margin: 0 auto;
   }
 
-  .stats {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 10px;
-    margin-top: 34px;
-  }
-
-  .stat {
-    padding: 16px;
-    border-radius: 12px;
-  }
-
-  .stat b {
-    font-size: 32px;
-  }
-
-  .stat span {
-    font-size: 12px;
-  }
-
   .marquee {
     margin-top: 10px;
     padding: 14px 0;
@@ -1399,22 +1326,6 @@ footer {
     text-align: center;
   }
 
-  .stats {
-    gap: 8px;
-  }
-
-  .stat {
-    padding: 14px;
-  }
-
-  .stat b {
-    font-size: 28px;
-  }
-
-  .stat span {
-    font-size: 11px;
-  }
-
   .profile-card {
     width: min(100%, 240px);
   }
@@ -1484,18 +1395,6 @@ footer {
     font-size: 14px;
   }
 
-  .stats {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .stat b {
-    font-size: 25px;
-  }
-
-  .stat span {
-    font-size: 10px;
-  }
-
   .tag {
     font-size: 12px;
   }
@@ -1535,7 +1434,6 @@ footer {
 @media (hover: none) and (pointer: coarse) {
 
   .profile-card:hover,
-  .stat:hover,
   .card:hover,
   .btn.solid:hover,
   .tag:hover {
@@ -1571,45 +1469,4 @@ footer {
     transition-duration: .01ms !important;
   }
 
-}
-
-
-
-
-
-.card {
-  position: sticky;
-  top: 100px;
-  width: 100%;
-  margin-bottom: 30px;
-  background-color: #0b0f14;
-  border: 1px solid #283618;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.8);
-}
-
-.card.custom-bg-card {
-  position: sticky;
-  background-color: #0b0f14;
-}
-
-.card.custom-bg-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('https://raw.githubusercontent.com/md-mostafaraihan/Multi-Area-OSPF-Configuration/refs/heads/master/MutiareaOSPF.png');
-  background-size: cover;
-  background-position: center;
-  opacity: 0.10;
-  z-index: 1;
-}
-
-.card>div,
-.card>span.n {
-  position: relative;
-  z-index: 2;
 }
