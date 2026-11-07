@@ -6,9 +6,9 @@ if (mq) {
 
 // 2. Scroll spine + percentage marker indicator
 const fill = document.querySelector('#spine .fill'),
-      pk = document.querySelector('#spine .packet'),
-      pct = document.getElementById('pct'),
-      marker = document.querySelector('.marker');
+  pk = document.querySelector('#spine .packet'),
+  pct = document.getElementById('pct'),
+  marker = document.querySelector('.marker');
 
 if (marker) marker.style.transition = 'opacity .3s';
 
@@ -91,20 +91,20 @@ if (cf) {
     }
 
     emailjs.send("service_f4w2pg9", "template_haekc69", params)
-    .then(() => {
-      if (note) {
-        note.style.color = 'var(--lime)';
-        note.textContent = "Message sent successfully ✓";
-      }
-      cf.reset();
-    })
-    .catch(error => {
-      if (note) {
-        note.style.color = '#ff6b6b';
-        note.textContent = "Message failed to send. Please try emailing directly.";
-      }
-      console.error("EmailJS submission error:", error);
-    });
+      .then(() => {
+        if (note) {
+          note.style.color = 'var(--lime)';
+          note.textContent = "Message sent successfully ✓";
+        }
+        cf.reset();
+      })
+      .catch(error => {
+        if (note) {
+          note.style.color = '#ff6b6b';
+          note.textContent = "Message failed to send. Please try emailing directly.";
+        }
+        console.error("EmailJS submission error:", error);
+      });
   });
 }
 
@@ -131,11 +131,11 @@ const io3 = new IntersectionObserver(es => es.forEach(e => {
 document.querySelectorAll('[data-count]').forEach(el => io3.observe(el));
 
 // 7. 3D Spine-Leaf Fabric Hero Canvas
-(function(){
+(function () {
   const canvas = document.getElementById('net3d');
   if (!canvas || !window.THREE) return;
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  
+
   let renderer;
   try {
     renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
@@ -159,7 +159,7 @@ document.querySelectorAll('[data-count]').forEach(el => io3.observe(el));
   const edgeMat = new THREE.LineBasicMaterial({ color: LIME, transparent: true, opacity: 0.75 });
   const edgeMatDim = new THREE.LineBasicMaterial({ color: LIME, transparent: true, opacity: 0.28 });
   const fillMat = new THREE.MeshBasicMaterial({ color: 0x121216 });
-  
+
   function makeSwitch(w, h, d, dim) {
     const g = new THREE.Group();
     const geo = new THREE.BoxGeometry(w, h, d);
@@ -206,10 +206,10 @@ document.querySelectorAll('[data-count]').forEach(el => io3.observe(el));
     x.fillStyle = g; x.fillRect(0, 0, 64, 64);
     return new THREE.CanvasTexture(c);
   })();
-  
+
   const PK = 42, packets = [];
   const pkMat = new THREE.SpriteMaterial({ map: glowTex, color: LIME, transparent: true, blending: THREE.AdditiveBlending, depthWrite: false });
-  
+
   function newPath() {
     const l1 = leaves[Math.floor(Math.random() * 8)];
     const sp = spines[Math.floor(Math.random() * 4)];
@@ -219,7 +219,7 @@ document.querySelectorAll('[data-count]').forEach(el => io3.observe(el));
       ? [hosts[hi], leaves[hi >> 1], spines[Math.floor(Math.random() * 4)]]
       : [l1, sp, l2];
   }
-  
+
   for (let i = 0; i < PK; i++) {
     const m = new THREE.Sprite(pkMat.clone());
     m.scale.set(0.16, 0.16, 1);
@@ -258,14 +258,14 @@ document.querySelectorAll('[data-count]').forEach(el => io3.observe(el));
   (function frame() {
     requestAnimationFrame(frame);
     if (!isCanvasVisible) return;
-    
+
     const dt = Math.min(clock.getDelta(), 0.05); t0 += dt;
     fab.rotation.y = -0.42 + Math.sin(t0 * 0.18) * 0.06;
     fab.position.y = 0.2 + Math.sin(t0 * 0.5) * 0.05;
-    
+
     mx += (tx - mx) * 0.05; my += (ty - my) * 0.05;
     rig.rotation.y = mx * 0.22; rig.rotation.x = my * 0.12;
-    
+
     packets.forEach(p => {
       p.t += p.s * dt;
       if (p.t >= 2) { p.t = 0; p.path = newPath(); }
@@ -273,7 +273,7 @@ document.querySelectorAll('[data-count]').forEach(el => io3.observe(el));
       p.m.position.lerpVectors(p.path[seg], p.path[seg + 1], tt);
       p.m.material.opacity = Math.sin(Math.min(p.t / 2, 1) * Math.PI) * 0.9 + 0.1;
     });
-    
+
     renderer.render(scene, camera);
   })();
 })();
