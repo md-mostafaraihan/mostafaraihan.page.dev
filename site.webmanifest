@@ -1,0 +1,17 @@
+{
+  "name": "Md. Mostafa Raihan | Network Engineer",
+  "short_name": "Raihan Portfolio",
+  "description": "Portfolio of Md. Mostafa Raihan, Network Engineer specializing in Cisco Enterprise Networking and System Administration.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b0b0d",
+  "theme_color": "#0b0b0d",
+  "icons": [
+    {
+      "src": "profile.jpg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

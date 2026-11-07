@@ -3,7 +3,7 @@
 
 # 🔷 Md. Mostafa Raihan
 
-### Junior Network Engineer | Cisco Networking | CCNA Learner
+### Network Engineer | Cisco Networking | CCNA Pathway
 
 <p>
   <img src="https://img.shields.io/badge/Cisco-Networking-0496FF?style=for-the-badge&logo=cisco&logoColor=white">
@@ -28,15 +28,12 @@
 <h2 align="center">👨‍💻 Professional Profile</h2>
 
 <p align="center">
-  I am an aspiring Network Engineer with a strong interest in Cisco
-  networking, routing, switching, and system administration.
-  My technical knowledge includes Cisco router and Catalyst switch
-  configuration, OSPF, BGP, RIP, EIGRP, VLANs, Inter-VLAN Routing,
-  NAT/PAT, and network security.
+  I am a Network Engineer. I configure and manage Cisco routers, Catalyst switches,
+  and computer systems. I know how to set up dynamic routing (OSPF, BGP),
+  VLAN segmentation, Inter-VLAN routing, ACLs, and NAT/PAT.
 
-  I also have knowledge of Windows, Linux, PC hardware troubleshooting,
-  and system maintenance. I am passionate about networking and
-  continuously improving my technical skills.
+  I also build and troubleshoot PC hardware, install Windows and Linux systems,
+  and resolve network connectivity issues to ensure reliable uptime.
 </p>
 
 ---
@@ -156,6 +153,6 @@
 
 🔷 CONNECT • CONFIGURE • TROUBLESHOOT • LEARN
 
-**Md. Mostafa Raihan | Junior Network Engineer**
+**Md. Mostafa Raihan | Network Engineer**
 
 </div>
