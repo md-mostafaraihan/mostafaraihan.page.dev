@@ -641,7 +641,7 @@ h2.big {
   overflow: hidden;
 }
 
-.card.custom-bg-card::before {
+.card.custom-bg-card1::before {
   content: "";
   position: absolute;
   top: 0;
@@ -649,6 +649,20 @@ h2.big {
   width: 100%;
   height: 100%;
   background-image: url('https://raw.githubusercontent.com/md-mostafaraihan/Multi-Area-OSPF-Configuration/refs/heads/master/MutiareaOSPF.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.10;
+  z-index: 1;
+}
+
+.card.custom-bg-card2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://raw.githubusercontent.com/md-mostafaraihan/BGP-Physical-Configuration/refs/heads/master/BGP%20Physical%20Configuration.png');
   background-size: cover;
   background-position: center;
   opacity: 0.10;
