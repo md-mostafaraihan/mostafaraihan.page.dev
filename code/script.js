@@ -87,7 +87,7 @@ if (cf) {
 
     if (note) {
       note.style.color = 'var(--lime)';
-      note.textContent = "Transmitting message...";
+      note.textContent = "Sending message...";
     }
 
     emailjs.send("service_f4w2pg9", "template_haekc69", params)
