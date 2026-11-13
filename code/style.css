@@ -683,6 +683,34 @@ h2.big {
   z-index: 1;
 }
 
+.card.custom-bg-card4::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://raw.githubusercontent.com/md-mostafaraihan/VLAN-inter-VLAN-configuration/master/VLAN%20and%20inter-VLAN.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.10;
+  z-index: 1;
+}
+
+.card.custom-bg-card5::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://raw.githubusercontent.com/md-mostafaraihan/STP-Logical-Link-Aggregation/refs/heads/master/STP-%26-Logical-Link-Aggregation.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.10;
+  z-index: 1;
+}
+
 .card>div,
 .card>span.n {
   position: relative;
